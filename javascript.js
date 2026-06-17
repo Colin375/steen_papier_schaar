@@ -4,6 +4,8 @@ const computerOutput = document.querySelector("#computer");
 const resultOutput = document.querySelector("#result");
 // Buttons
 const btns = document.querySelectorAll('button');
+// Score
+const humanScore = document.querySelector("#score")
 // Rules
 const winMoves = {
     Steen: "Schaar",
@@ -13,6 +15,7 @@ const winMoves = {
 // Choices
 let humanChoice = "";
 let computerChoice = "";
+let score = 0;
 
 // Function for running the game
 function playGame(event) {
@@ -41,6 +44,8 @@ function playGame(event) {
         resultOutput.innerHTML = "Gelijkspel.";
     } else if (winMoves[humanChoice] === computerChoice) {
         resultOutput.innerHTML = "Je hebt gewonnen!"
+        score++
+        humanScore.innerHTML = score;
     } else {
         resultOutput.innerHTML = "Je hebt verloren.";
     }
@@ -51,7 +56,9 @@ humanOutput.innerHTML = "Dit is de keuze die jij maakt.";
 computerOutput.innerHTML = "Dit is de keuze die de computer maakt.";
 resultOutput.innerHTML = "Hier komt te staan of je wint.";
 
+
 // Button click event
 btns.forEach(function(button) {
     button.addEventListener("click", playGame)
 });
+

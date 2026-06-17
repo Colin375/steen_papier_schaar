@@ -7,7 +7,7 @@ button {
     font-size: 30px;
 }
 
-.results {
+.results, .score {
     font-size: larger;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     margin-top: 10px;
@@ -19,7 +19,7 @@ button {
     width: 40%;
     margin-right: 30%;
     background-color: darkgray;
-    height: 250px;
+    height: 300px;
     align-items: center;
     display: flex;
     flex-direction: column;
