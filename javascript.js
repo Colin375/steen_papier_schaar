@@ -3,9 +3,7 @@ const humanOutput = document.querySelector("#human");
 const computerOutput = document.querySelector("#computer");
 const resultOutput = document.querySelector("#result");
 // Buttons
-const stoneBtn = document.querySelector("#Steen");
-const paperBtn = document.querySelector("#Papier");
-const scissorsBtn = document.querySelector("#Schaar");
+const btns = document.querySelectorAll('button');
 // Rules
 const winMoves = {
     Steen: "Schaar",
@@ -52,6 +50,6 @@ computerOutput.innerHTML = "Dit is de keuze die de computer maakt.";
 resultOutput.innerHTML = "Hier komt te staan of je wint.";
 
 // Button click event
-stoneBtn.addEventListener("click", playGame);
-paperBtn.addEventListener("click", playGame);
-scissorsBtn.addEventListener("click", playGame);
+btns.forEach(function(button) {
+    button.addEventListener("click", playGame)
+});
