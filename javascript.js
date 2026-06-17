@@ -22,14 +22,16 @@ function playGame(event) {
     // Computer answer
     const randomNumber = Math.floor(Math.random() * 3) + 1;
 
-    if (randomNumber === 1) {
-        computerChoice = 'Steen';
-    }
-    if ( randomNumber === 2) {
-        computerChoice = 'Papier';
-    }
-    if ( randomNumber === 3) {
-        computerChoice = 'Schaar';
+    switch (randomNumber) {
+        case 1:
+            computerChoice = 'Steen'
+        break
+        case 2:
+            computerChoice = 'Papier'
+        break
+        case 3:
+            computerChoice = 'Schaar'
+        break
     }
 
     computerOutput.innerHTML = computerChoice;
